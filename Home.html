@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Navigation Bar</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+
 	<link rel="icon" type="image/png" href="img/000.png">
 
 	<style>
@@ -23,6 +24,29 @@
     height: 100%;
     border: none;
   }
+  .shadow-text {
+        font-size: 30px;
+        font-family: Arial, sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.95); 
+  }
+  .logo1 {
+    
+    top: 10%;
+    left: 0px; /* Starting from left middle */
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    opacity: 10;
+    transition: all 0.5s ease;
+    
+    
+        width: 300px;
+        height: 230px;
+        border-radius: 100%;
+        margin: 50px 0;
+         
+  }
+        
+      
   
 	</style>
 
@@ -35,12 +59,14 @@
             </div>
 			<ul>
 				<li><a onclick="openPage('welcome.html')" href="#">Home</a></li>
+				<li><a onclick="openPage('orders.html')" href="#">Orders</a></li>
+
 				<li><a onclick="openPage('table.html')"  href="#">Pie Chocolates</a></li>
 				<li><a onclick="openPage('contact.html')" href="#">Contact</a></li>
 
 				<li><a onclick="openPage('about.html')" href="#">About</a></li>
-				 <button ><a href="#">SignIn</a></button> 
-				<button><a onclick="logout('index.html')" href="#">SignUp</a></button>
+				 
+				<button><a onclick="logout()" href="#">SignUp</a></button>
 			</ul>
 		</div>
 	</nav>
@@ -50,25 +76,31 @@
 	  
 	  <div class="container">
 		<div class="column left-column">
-			<br><br><br>
-		  <center><h2>All pies</h2></center><br><br><br>
+			
+			
+			
+        <img src="img/logo chess1.png"  class="logo1" >
+		
 		  <ul>
             
-        	<li><a onclick="openPage('table.html')"  href="#">Cheese cakes</a></li>
-            <li><a href="#" onclick="openPage('about.html')">Fruit pies</a></li>
-            <li><a href="#" onclick="openPage('about.html')">Seasonal pies</a></li>
-            <li><a href="#promos" onclick="openPage('about.html')">Promos</a></li><br><br><br><br><br><br>
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        	<li><a onclick="openPage('table.html')"  href="#">Cheese cakes</a></li></br>
+            <li><a href="#" onclick="openPage('about.html')">Fruit pies</a></li></br>
+            <li><a href="#" onclick="openPage('about.html')">Seasonal pies</a></li></br>
+            <li><a href="#promos" onclick="openPage('about.html')">Promos</a></li></br>
+		</br></br></br></br></br></br></br></br></br></br></br></br></br></br>
         </ul>		</div>
 		<div class="column right-column"  id="right-column">
 		 
-		  <iframe id="pageFrame" src="" frameborder="0"></iframe>
+		  <iframe id="pageFrame" src="home_content.html" frameborder="0" class="logo-action">
 
-		  <p>This is the content for the right column.</p>
+			<img src="img/logo chess1.png" alt="Logo" class="logo" id="logo">
+		
+		</iframe>
+		<script src="script/script.js"></script>
 		</div>
 	  </div>
 	  
-	  <footer class="footer">
+	  <footer class="footer" >
 		<p>@prasad</p>
 	  </footer>
 	  <script>
@@ -82,7 +114,7 @@
   sessionStorage.clear();
   
   // Redirect to login page (replace "login.html" with your login page URL)
-  window.location.href = "index.html";
+  window.location.href = "login.html";
 }
 		</script>
 </body>
